@@ -1,376 +1,182 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>JavaScript Mastery Plan for Power Apps Developers</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      padding: 32px 7vw;
-      background: #f4f8fb;
-      color: #234048;
-      min-height: 100vh;
-    }
-    .header-wrapper {
-      background: linear-gradient(90deg, #312ceb 0%, #5ee7df 100%);
-      color: #fff;
-      border-radius: 14px;
-      padding: 38px 20px 32px 20px;
-      box-shadow: 0 2px 16px rgba(70,105,205,0.18);
-      position: relative;
-      margin-bottom: 28px;
-      text-align: center;
-      overflow: hidden;
-    }
-    .header-wrapper:after {
-      content: '';
-      background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Microsoft_Power_Platform_logo.svg/512px-Microsoft_Power_Platform_logo.svg.png') no-repeat right center/60px auto;
-      opacity: 0.13;
-      position: absolute;
-      top: 22px; right: 33px; width: 80px; height: 80px; pointer-events: none;
-    }
-    h1 {
-      font-size: 2.18rem;
-      margin: 0;
-      letter-spacing: 0.03em;
-    }
-    .subtitle {
-      margin-top: 0.55rem; font-size: 1.16rem; font-style: italic; color: #e3f6fb;
-    }
-    .js-flash {
-      display: inline-block;
-      background: #ffee33;
-      color: #234048;
-      border-radius: 7px;
-      padding: 2px 17px 2px 11px;
-      margin-top: 14px;
-      font-weight: 600;
-      font-size: 1.08rem;
-      box-shadow: 1px 2px 7px #ffa70055;
-      letter-spacing: 0.01em;
-    }
-    .tagline {
-      text-align: center;
-      margin: 26px 0 35px 0;
-      background: linear-gradient(90deg,#ffe324 0%,#e3f6fb 100%);
-      color: #684800;
-      font-size: 1.07rem;
-      border-radius: 7px;
-      padding: 9px 0;
-      font-weight: 600;
-      border: 1px solid #ffe32455;
-      box-shadow: 0 2px 8px #fffbe7af;
-    }
-    .linkedin-badge {
-      margin-top: 14px;
-      margin-bottom: 12px;
-      text-align: center;
-    }
-    .linkedin-badge a {
-      display: inline-block;
-      background: #0077b5;
-      color: #fff !important;
-      padding: 7px 22px 7px 39px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-size: 1.1em;
-      font-weight: bold;
-      background-image: url('https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg');
-      background-size: 18px 18px;
-      background-repeat: no-repeat;
-      background-position: 15px center;
-      transition: background 0.25s, box-shadow 0.2s;
-      box-shadow: 0 4px 24px #0d6cff12;
-    }
-    .linkedin-badge a:hover {
-      background-color: #004471;
-      box-shadow: 0 2px 12px #0097ff19;
-    }
-    h2 {
-      color: #084c8c;
-      font-size: 1.4rem;
-      margin-top: 1.9em;
-      border-bottom: 2px solid #008ac9;
-      padding-bottom: 2px;
-      margin-bottom: 0.6em;
-      letter-spacing: 0.01em;
-    }
-    table {
-      border-collapse: collapse; width: 100%; margin-bottom: 2.5em;
-      border-radius: 12px; overflow: hidden;
-      box-shadow: 0 2px 14px 0 #08518a25;
-      background: #fff;
-      margin-top: 0.8em;
-    }
-    th, td {
-      border: 1px solid #d8eafd;
-      padding: 13px 11px;
-      font-size: 1em;
-    }
-    th {
-      background: linear-gradient(90deg, #0184d1 60%, #31b8c6 100%);
-      color: #fff; font-weight: 700;
-      letter-spacing: 0.01em;
-    }
-    tr:nth-child(even) { background-color: #f5faff; }
-    tr:hover td { background-color: #edfcff; transition: 0.23s; }
-    a:not(.linkedin-badge a) {
-      color: #0077c8; text-decoration: none; font-weight: 600; transition: color 0.2s;
-    }
-    a:not(.linkedin-badge a):hover { color: #2424aa; text-decoration: underline; }
-    .callout {
-      background: #eafaf3;
-      border-left: 6px solid #2fe36b;
-      padding: 15px 16px;
-      margin: 28px 0 30px 0;
-      border-radius: 8px;
-      color: #17572e;
-      font-size: 1.01rem;
-    }
-    footer {
-      text-align: center;
-      margin-top: 2.6em;
-      color: #315379;
-      font-size: 0.98rem;
-    }
-    .footer-linkedin {
-      display: inline-block;
-      margin-top: 10px;
-      font-weight: bold;
-      color: #0a66c2;
-      text-decoration: none;
-    }
-    .footer-linkedin img {
-      width: 20px; vertical-align: middle; margin-right: 6px;
-    }
-    @media (max-width: 768px) {
-      body { padding: 10px; }
-      h1 { font-size: 1.35rem; }
-      h2 { font-size: 1.01rem; }
-      table, th, td { font-size: 0.89em; }
-      .header-wrapper { padding: 20px 4vw 18px 4vw; }
-      .tagline { font-size: 0.98rem; }
-      .callout { font-size: 0.97rem; }
-      .linkedin-badge a { font-size: 1em; padding: 7px 7vw 7px 34px;}
-    }
-  </style>
+<meta charset="UTF-8">
+<title>JavaScript for Power Apps – 1-Hour-a-Day Roadmap</title>
+<style>
+body{font-family:'Segoe UI',Tahoma,Verdana,sans-serif;padding:32px 7vw;background:#f4f8fb;color:#234048;line-height:1.55}
+.header{background:linear-gradient(90deg,#312ceb 0%,#5ee7df 100%);color:#fff;border-radius:14px;padding:38px 20px 32px;
+        box-shadow:0 2px 16px rgba(70,105,205,.18);text-align:center;margin-bottom:28px;position:relative}
+.header:after{content:'';background:url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Microsoft_Power_Platform_logo.svg/512px-Microsoft_Power_Platform_logo.svg.png')
+              no-repeat right center/60px auto;opacity:.12;position:absolute;top:22px;right:33px;width:80px;height:80px}
+h1{margin:0;font-size:2.1rem;letter-spacing:.03em}.subtitle{margin:.6rem 0 0;font-size:1.15rem;font-style:italic;color:#e3f6fb}
+.badge{display:inline-block;background:#ffee33;color:#234048;border-radius:7px;padding:3px 19px;font-weight:700;font-size:1.04rem;
+       box-shadow:1px 2px 7px #ffa70055;margin-top:14px}
+.linkedin{text-align:center;margin:18px 0}.linkedin a{display:inline-block;background:#0077b5;color:#fff;padding:7px 22px 7px 39px;
+       border-radius:6px;font-weight:600;font-size:1.05em;background-image:url('https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg');
+       background-size:18px;background-repeat:no-repeat;background-position:15px center;box-shadow:0 4px 24px #0d6cff15;transition:.25s}
+.linkedin a:hover{background:#004471;box-shadow:0 2px 12px #0097ff25}
+.tagline{text-align:center;background:linear-gradient(90deg,#ffe324 0%,#e3f6fb 100%);color:#684800;border:1px solid #ffe32455;
+        border-radius:7px;padding:9px;font-weight:600;box-shadow:0 2px 8px #fffbe7af;margin:26px 0}
+table{width:100%;border-collapse:collapse;background:#fff;box-shadow:0 2px 14px #08518a25;border-radius:12px;overflow:hidden}
+th,td{border:1px solid #d8eafd;padding:11px;font-size:.95em;vertical-align:top}th{background:linear-gradient(90deg,#0184d1 60%,#31b8c6 100%);
+color:#fff;font-weight:700}tr:nth-child(even){background:#f5faff}tr:hover td{background:#edfcff}
+a{color:#0077c8;font-weight:600;text-decoration:none}a:hover{color:#2424aa;text-decoration:underline}
+footer{text-align:center;margin:40px 0 10px;color:#315379;font-size:.95em}footer a{font-weight:bold;color:#0a66c2;text-decoration:none}
+footer img{width:20px;vertical-align:middle;margin-right:6px}
+@media(max-width:768px){body{padding:10px}table,th,td{font-size:.88em}}
+</style>
 </head>
 <body>
 
-<div class="header-wrapper">
-  <h1>JavaScript Learning Plan for <span style="color:#fff78d;">Power Apps Developers</span></h1>
-  <p class="subtitle">Master modern JavaScript for deep, real-world customizations in Dynamics 365 and Power Apps</p>
-  <div class="js-flash">JS + Power Apps 🚀</div>
+<div class="header">
+  <h1>JavaScript for Power Apps – 1 Hour a Day</h1>
+  <p class="subtitle">30 tracked topics · docs for depth · videos only where truly available</p>
+  <div class="badge">From zero → custom Power Apps</div>
 </div>
 
-<div class="linkedin-badge">
+<div class="linkedin">
   <a href="https://www.linkedin.com/in/kiran-naidu-manchala-287215195/" target="_blank" rel="noopener">
-     Connect with the creator: Kiran Naidu Manchala
+     Connect with Kiran Naidu Manchala
   </a>
 </div>
 
 <div class="tagline">
-  1 hour per day &middot; 30 days &middot; Daily practice &middot; Full Power Apps + D365 focus
+  Work any row for ~1 hour, mark it done, move on – all links verified 20 Jul 2025
 </div>
 
-<div class="callout">
-  <b>Why this plan?</b>
-  <br>This interactive roadmap is purpose-built for Power Apps developers who want to confidently drive business automation, UI logic, and advanced form scripting with JavaScript—including topics like <b>formContext</b>, <b>Web API</b>, and <b>Global Context</b>.
-</div>
-
-
-<h2>Days 1–6: JavaScript Essentials (OOP)</h2>
 <table>
-  <tr><th>Day</th><th>Concept</th><th>Task/Practice</th><th>Resource Link</th></tr>
-  <tr>
-    <td>1</td><td>JavaScript Syntax & Variables</td>
-    <td>Write sample var/let/const, explore data types</td>
-    <td><a href="https://youtu.be/PkZNo7MFNFg" target="_blank">JS Basics - freeCodeCamp</a></td>
-  </tr>
-  <tr>
-    <td>2</td><td>Functions & Scope</td>
-    <td>Write arrow vs regular function, practice lexical scope</td>
-    <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions" target="_blank">Functions – MDN</a></td>
-  </tr>
-  <tr>
-    <td>3</td><td>Objects & Arrays</td>
-    <td>Create Book/Author objects, traverse arrays</td>
-    <td><a href="https://youtu.be/1kBiqhkatYU" target="_blank">Objects – Java Brains</a></td>
-  </tr>
-  <tr>
-    <td>4</td><td>OOP: Classes & Prototypes</td>
-    <td>Recreate a class from Java, extend with prototype</td>
-    <td><a href="https://youtu.be/T-HGdc8L-7w" target="_blank">Classes & Objects in JS</a></td>
-  </tr>
-  <tr>
-    <td>5</td><td>Encapsulation & Inheritance</td>
-    <td>Inherit one class from another, demonstrate encapsulation</td>
-    <td><a href="https://youtu.be/XskMWBXNbp0" target="_blank">Prototypes Explained – Web Dev Simplified</a></td>
-  </tr>
-  <tr>
-    <td>6</td><td>Error Handling & Debugging</td>
-    <td>Practice try/catch, debug in browser console</td>
-    <td><a href="https://youtu.be/Tp2GHj3s4oM" target="_blank">JS Debugging</a></td>
-  </tr>
-</table>
+<tr><th>Day</th><th>Topic</th><th>Video</th><th>Reading / Docs</th></tr>
 
-<h2>Days 7–10: D365/Power Apps JS Integration</h2>
-<table>
-  <tr><th>Day</th><th>Concept</th><th>Task/Practice</th><th>Resource Link</th></tr>
-  <tr>
-    <td>7</td><td>JS as Web Resources in D365/Power Apps</td>
-    <td>Deploy a test web resource, trigger OnLoad alert</td>
-    <td><a href="https://youtu.be/4wR_h6gk6hc" target="_blank">JavaScript in D365 – CRM Dev</a></td>
-  </tr>
-  <tr>
-    <td>8</td><td>Event Handlers (OnChange, OnSave, OnLoad)</td>
-    <td>Register a function for OnChange, test value update</td>
-    <td><a href="https://learn.microsoft.com/en-us/power-apps/developer/model-driven-apps/clientapi/events" target="_blank">D365 Event Handlers (MS Docs)</a></td>
-  </tr>
-  <tr>
-    <td>9</td><td>Working with Fields and Controls</td>
-    <td>Use executionContext to update field programmatically</td>
-    <td><a href="https://youtu.be/XGrfpRzg_Ig" target="_blank">formContext Example – Softchief</a></td>
-  </tr>
-  <tr>
-    <td>10</td><td>Solutions & Script Deployment</td>
-    <td>Add JS to solution, manage versioning</td>
-    <td><a href="https://learn.microsoft.com/en-us/power-apps/maker/data-platform/solutions-overview" target="_blank">Solutions Deep Dive – Microsoft</a></td>
-  </tr>
-</table>
+<tr><td>1</td><td>JS Variables & Types</td>
+    <td><a href="https://www.youtube.com/watch?v=PkZNo7MFNFg&t=1122s" target="_blank">freeCodeCamp @18:42</a></td>
+    <td><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Variables" target="_blank">MDN Variables</a></td></tr>
 
-<h2>Days 11–16: Mastering formContext</h2>
-<table>
-  <tr><th>Day</th><th>Concept</th><th>Task/Practice</th><th>Resource Link</th></tr>
-  <tr>
-    <td>11</td><td>What is executionContext & formContext</td>
-    <td>Access context, log formContext to console</td>
-    <td><a href="https://www.crmcrate.com/code/d365-crm-formcontext/" target="_blank">formContext Explained – CRM Crate</a></td>
-  </tr>
-  <tr>
-    <td>12</td><td>Get/Set Field Values</td>
-    <td>Build a function to update a field's value</td>
-    <td><a href="https://www.inogic.com/blog/2018/08/introduction-of-formcontext-and-getting-setting-field-value-using-formcontext-in-dynamics-365-v9-0/" target="_blank">Get/Set Example – Inogic</a></td>
-  </tr>
-  <tr>
-    <td>13</td><td>Show/Hide Fields & Sections</td>
-    <td>Toggle visibility based on conditions</td>
-    <td><a href="https://carldesouza.com/how-to-show-and-hide-tabs-sections-fields-using-javascript-in-dynamics-365/" target="_blank">Show/Hide Section – Carl de Souza</a></td>
-  </tr>
-  <tr>
-    <td>14</td><td>Enabling/Disabling Fields & Tabs</td>
-    <td>Write a function to enable or disable controls</td>
-    <td><a href="https://learn.microsoft.com/en-us/power-apps/developer/model-driven-apps/clientapi/reference/formcontext-ui-controls/enable" target="_blank">Enable/Disable Fields – MS Docs</a></td>
-  </tr>
-  <tr>
-    <td>15</td><td>Handling Lookup Fields & OptionSets</td>
-    <td>Set/retrieve lookup and option set values</td>
-    <td><a href="https://softchief.com/set-get-optionset-value-using-js-d365/" target="_blank">OptionSet JS – Softchief</a></td>
-  </tr>
-  <tr>
-    <td>16</td><td>Validation Scripts</td>
-    <td>Write validation and alert users dynamically</td>
-    <td><a href="https://www.dynamics365tips.com/form-validation-using-javascript-in-dynamics-365/" target="_blank">Form Validation – Dynamics 365 Tips</a></td>
-  </tr>
-</table>
+<tr><td>2</td><td>Functions & Scope</td>
+    <td><a href="https://www.youtube.com/watch?v=8dWL3wF_OMw" target="_blank">SuperSimpleDev – Functions</a></td>
+    <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions" target="_blank">MDN Functions</a></td></tr>
 
-<h2>Days 17–22: Web API Deep Dive</h2>
-<table>
-  <tr><th>Day</th><th>Concept</th><th>Task/Practice</th><th>Resource Link</th></tr>
-  <tr>
-    <td>17</td><td>D365 Web API Overview</td>
-    <td>Explore API docs, call basic retrieve from JavaScript</td>
-    <td><a href="https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/overview" target="_blank">D365 Web API Docs (MS)</a></td>
-  </tr>
-  <tr>
-    <td>18</td><td>Retrieving Records (GET)</td>
-    <td>Retrieve account/contact using JS API</td>
-    <td><a href="https://www.inogic.com/blog/2017/12/using-web-api-dynamics-365-javascript/" target="_blank">Retrieve Example – Inogic</a></td>
-  </tr>
-  <tr>
-    <td>19</td><td>Creating Records (POST)</td>
-    <td>Create a new record with API + error handling</td>
-    <td><a href="https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/create-entity-web-api" target="_blank">Create Example – Microsoft</a></td>
-  </tr>
-  <tr>
-    <td>20</td><td>Updating Records (PATCH)</td>
-    <td>Update a field using API, verify in form</td>
-    <td><a href="https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/update-entity-web-api" target="_blank">Update Record – Microsoft</a></td>
-  </tr>
-  <tr>
-    <td>21</td><td>Deleting Records (DELETE)</td>
-    <td>Write JS to delete a record by ID</td>
-    <td><a href="https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/delete-entity-web-api" target="_blank">Delete Record – Microsoft</a></td>
-  </tr>
-  <tr>
-    <td>22</td><td>Complex Queries with API</td>
-    <td>Query with $filter/$select</td>
-    <td><a href="https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/query-data-web-api" target="_blank">OData Queries – Microsoft</a></td>
-  </tr>
-</table>
+<tr><td>3</td><td>Objects & Arrays</td>
+    <td><a href="https://www.youtube.com/watch?v=R8rmfD9Y5-c" target="_blank">Web Dev Simplified</a></td>
+    <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects" target="_blank">MDN Objects</a></td></tr>
 
-<h2>Days 23–26: Global Context & Advanced UI</h2>
-<table>
-  <tr><th>Day</th><th>Concept</th><th>Task/Practice</th><th>Resource Link</th></tr>
-  <tr>
-    <td>23</td><td>Xrm.Utility.getGlobalContext</td>
-    <td>Get user/org/app info, display it on form</td>
-    <td><a href="https://learn.microsoft.com/en-us/power-apps/developer/model-driven-apps/clientapi/reference/xrm-utility/getglobalcontext" target="_blank">getGlobalContext Docs – MS</a></td>
-  </tr>
-  <tr>
-    <td>24</td><td>Display Form Notifications</td>
-    <td>Show timed/dismissible notifications</td>
-    <td><a href="https://softchief.com/form-notification-in-dynamics-365-using-javascript/" target="_blank">Form Notifications – Softchief</a></td>
-  </tr>
-  <tr>
-    <td>25</td><td>Use Secure & Shared Variables</td>
-    <td>Demo secure vars in scripts</td>
-    <td><a href="https://learn.microsoft.com/en-us/power-apps/maker/data-platform/environmentvariables" target="_blank">Environment Variables – MS</a></td>
-  </tr>
-  <tr>
-    <td>26</td><td>Session/Local Storage</td>
-    <td>Persist values per user/session in D365</td>
-    <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API" target="_blank">Web Storage API – MDN</a></td>
-  </tr>
-</table>
+<tr><td>4</td><td>Classes & Prototypes</td>
+    <td>See written guide</td>
+    <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes" target="_blank">MDN Classes</a></td></tr>
 
-<h2>Days 27–30: Real-World Scenarios & Best Practices</h2>
-<table>
-  <tr><th>Day</th><th>Concept</th><th>Task/Practice</th><th>Resource Link</th></tr>
-  <tr>
-    <td>27</td><td>Implement a Business Rule in JS</td>
-    <td>E.g., Required fields, conditional lock</td>
-    <td><a href="https://www.linkedin.com/pulse/business-rules-dynamics-365-javascript-ramkrishna-chellappan/" target="_blank">Business Rules with JS – LinkedIn</a></td>
-  </tr>
-  <tr>
-    <td>28</td><td>Debugging JS in Power Apps</td>
-    <td>Use browser DevTools & XrmToolBox</td>
-    <td><a href="https://carldesouza.com/debugging-javascript-in-dynamics-365/" target="_blank">Debugging JS – Carl de Souza</a></td>
-  </tr>
-  <tr>
-    <td>29</td><td>Deploying & Versioning Scripts</td>
-    <td>Proper structuring and management of scripts</td>
-    <td><a href="https://community.dynamics.com/365/b/dynamics365now/posts/how-to-manage-versions-of-your-javascript-files-in-dynamics-365" target="_blank">Script Management – Dynamic Communities</a></td>
-  </tr>
-  <tr>
-    <td>30</td><td>Explore Popular Tools (XrmToolBox, PCF)</td>
-    <td>Try out any D365 JS productivity tool</td>
-    <td><a href="https://www.xrmtoolbox.com/" target="_blank">XrmToolBox – Official</a></td>
-  </tr>
-</table>
+<tr><td>5</td><td>OOP Principles</td>
+    <td>See written guide</td>
+    <td><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS" target="_blank">MDN OOP</a></td></tr>
 
+<tr><td>6</td><td>map / filter / reduce</td>
+    <td><a href="https://www.youtube.com/watch?v=niSAmzXuFKI" target="_blank">Web Dev Simplified – Array Methods</a></td>
+    <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">MDN Array Methods</a></td></tr>
+
+<tr><td>7</td><td>Error Handling & Debugging</td>
+    <td><a href="https://www.youtube.com/watch?v=H0XScE08hy8" target="_blank">Mosh – JS Debugging </a></td>
+    <td><a href="https://developer.chrome.com/docs/devtools/javascript/" target="_blank">Chrome DevTools Guide</a></td></tr>
+
+<tr><td>8</td><td>Promises & Async/Await</td>
+    <td><a href="https://www.youtube.com/watch?v=PoRJizFvM7s" target="_blank">Net Ninja – Async/Await</a></td>
+    <td><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Promises" target="_blank">MDN Promises</a></td></tr>
+
+<tr><td>9</td><td>Fetch API / AJAX</td>
+    <td><a href="https://www.youtube.com/watch?v=cuEtnrL9-H0" target="_blank">Web Dev Simplified – Fetch API</a></td>
+    <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch" target="_blank">MDN Fetch API</a></td></tr>
+
+<tr><td>10</td><td>Power Apps UI Basics</td>
+    <td><a href="https://www.youtube.com/watch?v=GPA8zlO2CsA" target="_blank">Shane Young – Intro</a></td>
+    <td><a href="https://learn.microsoft.com/training/paths/power-apps-canvas" target="_blank">MS Learn Canvas</a></td></tr>
+
+<tr><td>11</td><td>Add JS Web Resources</td>
+    <td><a href="https://www.youtube.com/watch?v=XY_7gZKnI40" target="_blank">MS Support Video</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/add-javascript-library" target="_blank">MS Docs Library</a></td></tr>
+
+<tr><td>12</td><td>Form Events & executionContext</td>
+    <td><a href="https://www.youtube.com/watch?v=2t09nqU7VGU" target="_blank">Tiyani365 – Form Events</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/power-apps/developer/model-driven-apps/clientapi/events" target="_blank">MS Docs Events</a></td></tr>
+
+<tr><td>13</td><td>OnChange Field Logic</td>
+    <td><a href="https://www.youtube.com/watch?v=tjAeJ2b6JNs" target="_blank">MS Reactor – OnChange</a></td>
+    <td><a href="https://carldesouza.com/get-and-set-field-values-using-formcontext-and-javascript-with-dynamics-365/" target="_blank">Carl de Souza</a></td></tr>
+
+<tr><td>14</td><td>formContext Basics</td>
+    <td>See written guide</td>
+    <td><a href="https://learn.microsoft.com/en-us/power-apps/developer/model-driven-apps/clientapi/clientapi-form-context" target="_blank">MS Docs formContext</a></td></tr>
+
+<tr><td>15</td><td>Filter Lookup Fields</td>
+    <td><a href="https://www.youtube.com/watch?v=YyJRWTzOzlU" target="_blank">Pragmatic Works – Lookup Filter</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/filter-lookup-column-choices" target="_blank">MS Docs Lookup</a></td></tr>
+
+<tr><td>16</td><td>Option Set / Choice</td>
+    <td><a href="https://www.youtube.com/watch?v=2p5N9U03NwU" target="_blank">April Dunnam – Choice Controls</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/power-apps/developer/model-driven-apps/clientapi/reference/attributes/optionset-attribute" target="_blank">MS Docs OptionSet</a></td></tr>
+
+<tr><td>17</td><td>Custom Field Validation</td>
+    <td>See written guide</td>
+    <td><a href="https://learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/create-business-rules-recommendations-validate-data" target="_blank">MS Docs Validation</a></td></tr>
+
+<tr><td>18</td><td>Web API CRUD</td>
+    <td>See written guide</td>
+    <td><a href="https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/web-api-samples-client-side-javascript" target="_blank">MS Docs Web API Sample</a></td></tr>
+
+<tr><td>19</td><td>Advanced Fetch & Auth</td>
+    <td><a href="https://www.youtube.com/watch?v=tc8DU14qX6I" target="_blank">Web Dev Simplified – Fetch Tokens</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/overview" target="_blank">MS Docs Web API</a></td></tr>
+
+<tr><td>20</td><td>Power Fx Filter / Lookup</td>
+    <td><a href="https://www.youtube.com/watch?v=f8EcbCQE4SQ" target="_blank">Shane Young – Power Fx Lookup</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/power-platform/power-fx/reference/function-filter-lookup" target="_blank">MS Docs Power Fx</a></td></tr>
+
+<tr><td>21</td><td>getGlobalContext </td>
+    <td>See written guide</td>
+    <td><a href="https://learn.microsoft.com/en-us/power-apps/developer/model-driven-apps/clientapi/reference/xrm-utility/getglobalcontext" target="_blank">MS Docs Context</a></td></tr>
+
+<tr><td>22</td><td>Environment Variables</td>
+    <td><a href="https://www.youtube.com/watch?v=8GBB7YXXv3A" target="_blank">April Dunnam – Env Variables</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/power-apps/maker/data-platform/environmentvariables" target="_blank">MS Docs Env Vars</a></td></tr>
+
+<tr><td>23</td><td>Session Storage Persistence</td>
+    <td><a href="https://www.youtube.com/watch?v=AwicscsvGLg" target="_blank">JS Simplified – Web Storage</a></td>
+    <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API" target="_blank">MDN Web Storage</a></td></tr>
+
+<tr><td>24</td><td>Form Notifications</td>
+    <td>See written guide</td>
+    <td><a href="https://learn.microsoft.com/en-us/power-apps/developer/model-driven-apps/clientapi/reference/forms/setformnotification" target="_blank">MS Docs Notification</a></td></tr>
+
+<tr><td>25</td><td>Business Rules vs JS</td>
+    <td>See written guide</td>
+    <td><a href="https://powerapps.microsoft.com/blog/business-rules-in-model-driven-apps/" target="_blank">Microsoft Blog</a></td></tr>
+
+<tr><td>26</td><td>Debugging JS in Power Apps</td>
+    <td><a href="https://www.youtube.com/watch?v=H0XScE08hy8" target="_blank">Mosh – JS Debugging</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/power-apps/developer/model-driven-apps/clientapi/debug-javascript" target="_blank">MS Docs Debug JS</a></td></tr>
+
+<tr><td>27</td><td>XrmToolBox Essentials</td>
+    <td><a href="https://www.youtube.com/watch?v=GW3k0cf3J4A" target="_blank">Intro – McAndrew Solutions</a></td>
+    <td><a href="https://www.xrmtoolbox.com/" target="_blank">Official XrmToolBox</a></td></tr>
+
+<tr><td>28</td><td>XrmToolBox Advanced</td>
+    <td><a href="https://www.youtube.com/watch?v=e9a0lzsRh_Q" target="_blank">Advanced Tips – Tiyani365</a></td>
+    <td><a href="https://365.training/Courses/Detail/xrmtoolbox" target="_blank">365.Training Course</a></td></tr>
+
+<tr><td>29</td><td>Deploy & Version Scripts</td>
+    <td><a href="https://www.youtube.com/watch?v=GfQlW-jCduQ" target="_blank">Gupta Consult – Solution Mgmt</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/add-javascript-library" target="_blank">MS Docs JS Library</a></td></tr>
+
+<tr><td>30</td><td>PCF Custom Controls</td>
+    <td><a href="https://www.youtube.com/watch?v=g6BmlhBtvs0" target="_blank">PCF Full Course – Coding with Kashif</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/power-apps/developer/component-framework/overview" target="_blank">MS Docs PCF Overview</a></td></tr>
+</table>
 
 <footer>
-    <p>
-      Made for Power Apps &amp; Dynamics 365 developers: Learn JavaScript, create powerful business solutions 🤝
-      <br>
-      <a class="footer-linkedin" href="https://www.linkedin.com/in/kiran-naidu-manchala-287215195/" target="_blank" rel="noopener">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn">
-        Connect on LinkedIn: Kiran Naidu Manchala
-      </a>
-    </p>
-  </footer>
-  
-  </body>
-  </html>
-  
+  <p>
+    Crafted for Power Apps & Dynamics 365 makers – upgrade your JavaScript, build wonders 🤝<br>
+    <a href="https://www.linkedin.com/in/kiran-naidu-manchala-287215195/" target="_blank" rel="noopener">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn">Kiran Naidu Manchala
+    </a>
+  </p>
+</footer>
+
+</body>
+</html>

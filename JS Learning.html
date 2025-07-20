@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Mastery Plan for Power Apps</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 25px; }
+    h1, h2 { color: #01598c; }
+    table { border-collapse: collapse; width: 100%; margin-bottom: 2em;}
+    th, td { border: 1px solid #dde; padding: 8px; text-align: left; }
+    th { background: #f0f6fa; }
+    tr:nth-child(even){background-color: #f6f9fc;}
+    ul { margin-top: 0; }
+    a { color: #1976d2; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+<h1>JavaScript Learning Plan for Power Apps Developers (1hr Daily)</h1>
+<p><b>For professionals with OOP background working in Power Apps/D365. Each day, spend ~1 hour on the labeled task. All resources are latest as of July 2025.</b></p>
+
+<h2>Days 1–6: JavaScript Essentials (OOP)</h2>
+<table>
+  <tr><th>Day</th><th>Concept</th><th>Task/Practice</th><th>Resource Link</th></tr>
+  <tr>
+    <td>1</td><td>JavaScript Syntax & Variables</td>
+    <td>Write sample var/let/const, explore data types</td>
+    <td><a href="https://youtu.be/PkZNo7MFNFg" target="_blank">JS Basics - freeCodeCamp</a></td>
+  </tr>
+  <tr>
+    <td>2</td><td>Functions & Scope</td>
+    <td>Write arrow vs regular function, practice lexical scope</td>
+    <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions" target="_blank">Functions – MDN</a></td>
+  </tr>
+  <tr>
+    <td>3</td><td>Objects & Arrays</td>
+    <td>Create Book/Author objects, traverse arrays</td>
+    <td><a href="https://youtu.be/1kBiqhkatYU" target="_blank">Objects – Java Brains</a></td>
+  </tr>
+  <tr>
+    <td>4</td><td>OOP: Classes & Prototypes</td>
+    <td>Recreate a class from Java, extend with prototype</td>
+    <td><a href="https://youtu.be/T-HGdc8L-7w" target="_blank">Classes & Objects in JS</a></td>
+  </tr>
+  <tr>
+    <td>5</td><td>Encapsulation & Inheritance</td>
+    <td>Inherit one class from another, demonstrate encapsulation</td>
+    <td><a href="https://youtu.be/XskMWBXNbp0" target="_blank">Prototypes Explained – Web Dev Simplified</a></td>
+  </tr>
+  <tr>
+    <td>6</td><td>Error Handling & Debugging</td>
+    <td>Practice try/catch, debug in browser console</td>
+    <td><a href="https://youtu.be/Tp2GHj3s4oM" target="_blank">JS Debugging</a></td>
+  </tr>
+</table>
+
+<h2>Days 7–10: D365/Power Apps JS Integration</h2>
+<table>
+  <tr><th>Day</th><th>Concept</th><th>Task/Practice</th><th>Resource Link</th></tr>
+  <tr>
+    <td>7</td><td>JS as Web Resources in D365/Power Apps</td>
+    <td>Deploy a test web resource, trigger OnLoad alert</td>
+    <td><a href="https://youtu.be/4wR_h6gk6hc" target="_blank">JavaScript in D365 – CRM Dev</a></td>
+  </tr>
+  <tr>
+    <td>8</td><td>Event Handlers (OnChange, OnSave, OnLoad)</td>
+    <td>Register a function for OnChange, test value update</td>
+    <td><a href="https://learn.microsoft.com/en-us/power-apps/developer/model-driven-apps/clientapi/events" target="_blank">D365 Event Handlers (MS Docs)</a></td>
+  </tr>
+  <tr>
+    <td>9</td><td>Working with Fields and Controls</td>
+    <td>Use executionContext to update field programmatically</td>
+    <td><a href="https://youtu.be/XGrfpRzg_Ig" target="_blank">formContext Example – Softchief</a></td>
+  </tr>
+  <tr>
+    <td>10</td><td>Solutions & Script Deployment</td>
+    <td>Add JS to solution, manage versioning</td>
+    <td><a href="https://learn.microsoft.com/en-us/power-apps/maker/data-platform/solutions-overview" target="_blank">Solutions Deep Dive – Microsoft</a></td>
+  </tr>
+</table>
+
+<h2>Days 11–16: Mastering formContext</h2>
+<table>
+  <tr><th>Day</th><th>Concept</th><th>Task/Practice</th><th>Resource Link</th></tr>
+  <tr>
+    <td>11</td><td>What is executionContext & formContext</td>
+    <td>Access context, log formContext to console</td>
+    <td><a href="https://www.crmcrate.com/code/d365-crm-formcontext/" target="_blank">formContext Explained – CRM Crate</a></td>
+  </tr>
+  <tr>
+    <td>12</td><td>Get/Set Field Values</td>
+    <td>Build a function to update a field's value</td>
+    <td><a href="https://www.inogic.com/blog/2018/08/introduction-of-formcontext-and-getting-setting-field-value-using-formcontext-in-dynamics-365-v9-0/" target="_blank">Get/Set Example – Inogic</a></td>
+  </tr>
+  <tr>
+    <td>13</td><td>Show/Hide Fields & Sections</td>
+    <td>Toggle visibility based on conditions</td>
+    <td><a href="https://carldesouza.com/how-to-show-and-hide-tabs-sections-fields-using-javascript-in-dynamics-365/" target="_blank">Show/Hide Section – Carl de Souza</a></td>
+  </tr>
+  <tr>
+    <td>14</td><td>Enabling/Disabling Fields & Tabs</td>
+    <td>Write a function to enable or disable controls</td>
+    <td><a href="https://learn.microsoft.com/en-us/power-apps/developer/model-driven-apps/clientapi/reference/formcontext-ui-controls/enable" target="_blank">Enable/Disable Fields – MS Docs</a></td>
+  </tr>
+  <tr>
+    <td>15</td><td>Handling Lookup Fields & OptionSets</td>
+    <td>Set/retrieve lookup and option set values</td>
+    <td><a href="https://softchief.com/set-get-optionset-value-using-js-d365/" target="_blank">OptionSet JS – Softchief</a></td>
+  </tr>
+  <tr>
+    <td>16</td><td>Validation Scripts</td>
+    <td>Write validation and alert users dynamically</td>
+    <td><a href="https://www.dynamics365tips.com/form-validation-using-javascript-in-dynamics-365/" target="_blank">Form Validation – Dynamics 365 Tips</a></td>
+  </tr>
+</table>
+
+<h2>Days 17–22: Web API Deep Dive</h2>
+<table>
+  <tr><th>Day</th><th>Concept</th><th>Task/Practice</th><th>Resource Link</th></tr>
+  <tr>
+    <td>17</td><td>D365 Web API Overview</td>
+    <td>Explore API docs, call basic retrieve from JavaScript</td>
+    <td><a href="https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/overview" target="_blank">D365 Web API Docs (MS)</a></td>
+  </tr>
+  <tr>
+    <td>18</td><td>Retrieving Records (GET)</td>
+    <td>Retrieve account/contact using JS API</td>
+    <td><a href="https://www.inogic.com/blog/2017/12/using-web-api-dynamics-365-javascript/" target="_blank">Retrieve Example – Inogic</a></td>
+  </tr>
+  <tr>
+    <td>19</td><td>Creating Records (POST)</td>
+    <td>Create a new record with API + error handling</td>
+    <td><a href="https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/create-entity-web-api" target="_blank">Create Example – Microsoft</a></td>
+  </tr>
+  <tr>
+    <td>20</td><td>Updating Records (PATCH)</td>
+    <td>Update a field using API, verify in form</td>
+    <td><a href="https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/update-entity-web-api" target="_blank">Update Record – Microsoft</a></td>
+  </tr>
+  <tr>
+    <td>21</td><td>Deleting Records (DELETE)</td>
+    <td>Write JS to delete a record by ID</td>
+    <td><a href="https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/delete-entity-web-api" target="_blank">Delete Record – Microsoft</a></td>
+  </tr>
+  <tr>
+    <td>22</td><td>Complex Queries with API</td>
+    <td>Query with $filter/$select</td>
+    <td><a href="https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/query-data-web-api" target="_blank">OData Queries – Microsoft</a></td>
+  </tr>
+</table>
+
+<h2>Days 23–26: Global Context & Advanced UI</h2>
+<table>
+  <tr><th>Day</th><th>Concept</th><th>Task/Practice</th><th>Resource Link</th></tr>
+  <tr>
+    <td>23</td><td>Xrm.Utility.getGlobalContext</td>
+    <td>Get user/org/app info, display it on form</td>
+    <td><a href="https://learn.microsoft.com/en-us/power-apps/developer/model-driven-apps/clientapi/reference/xrm-utility/getglobalcontext" target="_blank">getGlobalContext Docs – MS</a></td>
+  </tr>
+  <tr>
+    <td>24</td><td>Display Form Notifications</td>
+    <td>Show timed/dismissible notifications</td>
+    <td><a href="https://softchief.com/form-notification-in-dynamics-365-using-javascript/" target="_blank">Form Notifications – Softchief</a></td>
+  </tr>
+  <tr>
+    <td>25</td><td>Use Secure & Shared Variables</td>
+    <td>Demo secure vars in scripts</td>
+    <td><a href="https://learn.microsoft.com/en-us/power-apps/maker/data-platform/environmentvariables" target="_blank">Environment Variables – MS</a></td>
+  </tr>
+  <tr>
+    <td>26</td><td>Session/Local Storage</td>
+    <td>Persist values per user/session in D365</td>
+    <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API" target="_blank">Web Storage API – MDN</a></td>
+  </tr>
+</table>
+
+<h2>Days 27–30: Real-World Scenarios & Best Practices</h2>
+<table>
+  <tr><th>Day</th><th>Concept</th><th>Task/Practice</th><th>Resource Link</th></tr>
+  <tr>
+    <td>27</td><td>Implement a Business Rule in JS</td>
+    <td>E.g., Required fields, conditional lock</td>
+    <td><a href="https://www.linkedin.com/pulse/business-rules-dynamics-365-javascript-ramkrishna-chellappan/" target="_blank">Business Rules with JS – LinkedIn</a></td>
+  </tr>
+  <tr>
+    <td>28</td><td>Debugging JS in Power Apps</td>
+    <td>Use browser DevTools & XrmToolBox</td>
+    <td><a href="https://carldesouza.com/debugging-javascript-in-dynamics-365/" target="_blank">Debugging JS – Carl de Souza</a></td>
+  </tr>
+  <tr>
+    <td>29</td><td>Deploying & Versioning Scripts</td>
+    <td>Proper structuring and management of scripts</td>
+    <td><a href="https://community.dynamics.com/365/b/dynamics365now/posts/how-to-manage-versions-of-your-javascript-files-in-dynamics-365" target="_blank">Script Management – Dynamic Communities</a></td>
+  </tr>
+  <tr>
+    <td>30</td><td>Explore Popular Tools (XrmToolBox, PCF)</td>
+    <td>Try out any D365 JS productivity tool</td>
+    <td><a href="https://www.xrmtoolbox.com/" target="_blank">XrmToolBox – Official</a></td>
+  </tr>
+</table>
+</body>
+</html>
